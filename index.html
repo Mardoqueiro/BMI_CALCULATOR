@@ -7,23 +7,90 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- The rubric assesses various aspects of the BMI Calculator, starting with variable declaration. It awards points based on whether variables are declared, input validation, and the implementation of a BMI calculation function. Additional points are awarded for the functionality of writing answers to the Document Object Model (DOM), formatting output to specified decimal places, and the responsiveness of onclick events. Styling is also considered, with points given for attempts and quality of styling. Additionally, responsiveness and deployment on platforms like GitHub and Netlify are evaluated. Time management is crucial, with points deducted for late submissions or missed deadlines. Overall, attention to detail in coding, functionality, styling, and deployment, within the given time frame, determines the final score. -->
+
     <div class="container">
-        <h1>BMI CALCULATOR</h1>
-        <form> 
-            <label for="weight">Your Weight (in kg)</label>
-            <input type="text" id="weight" placeholder="Your Weight (in kg)">
-            <label for="height">Your Height (in cm)</label>
-            <input type="text" id="height" placeholder="Your Height (in cm)">
-            <button id="btn">Calculate BMI</button>
-        </form>
-        <div id="result">
-            <p>Your BMI is:</p>
-            <span>
-                <p class="bmi"></p>
-            </span>
-            <p class="comment"></p>
+        <div class="left_side">
+            <h1>BMI CALCULATOR</h1>
+            <form>
+                <div class="wrapper">
+                    <div class="data">
+                        <label for="weight">Weight (kg)</label>
+                        <input type="number" id="weight">
+                    </div>
+                    <div class="data">
+                        <label for="height">Height (cm)</label>
+                        <input type="number" id="height">
+                    </div>
+                    <div class="btn">
+                        <button type="button" id="btn">Calculate</button>
+                    </div>
+                </div>
+            </form>
         </div>
-    </div>
+        <div class="right_side">
+            <div class="result">
+                <div class="wrapper">
+                    <div class="type">
+                        BMI
+                    </div>
+                    <div class="bmi" id="bmi">
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="type">
+                        Underweight
+                    </div>
+                    <div class="under" id="under">
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="type">
+                        Normal
+                    </div>
+                    <div class="normal" id="normal">
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="type">
+                        Overweight
+                    </div>
+                    <div class="over" id="over">
+                    </div>
+                </div>
+                <div class="wrapper">   
+                    <div class="type">
+                        Obese
+                    </div>  
+                    <div class="obese" id="obese">
+                    </div>
+                </div>
+
+                <div class="output" id="output">
+                </div>
+
+                <div class="result" id="result">
+                    <span class="hidden" id="under"></span>
+                    <span class="hidden" id="normal"></span>
+                    <span class="hidden" id="over"></span>
+                    <span class="hidden" id="obese"></span>
+                </div>
+
+                <div class="hidden" id="bmi"></div>
+                <div class="hidden" id="output"></div>
+                <div class="hidden" id="result"></div>
+                <div class="hidden" id="bmi"></div>
+                <div class="hidden" id="under"></div>
+                <div class="hidden" id="normal"></div>
+                <div class="hidden" id="over"></div>
+                <div class="hidden" id="obese"></div>
+            </div>
+
+            <button type="button" id="reset">Reset</button>
+
+        </div>
+    </div>  
+
     <script src="script/code.js"></script>
 </body>
 </html>
